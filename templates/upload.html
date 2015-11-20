@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Project Pathway</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">  
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/reset.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/grid.css') }}">
+	<link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.css" />
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/index.css') }}">
+    <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+</head>
+<body>
+	<h1>Hello World!</h1>
+	<div class="row">
+	    <form action="POST" method="post" enctype="multipart/form-data">
+		  <input type="file" name="file">
+		  <input type="button" id="Upload" value="Upload">
+		</form>
+	</div>
+
+	<script type="text/javascript">
+	$(document).ready(function () {
+
+/*
+$(function() {
+    $('#Upload').on('click', function() {
+        var form_data = new FormData($('form')[0]);
+        $.ajax({
+            type: 'POST',
+            url: '/file_upload',
+            data: form_data,
+            contentType: false,
+            cache: false,
+            processData: false,
+            async: false,
+            success: function(data) {
+                console.log('Success!');
+            },
+        });
+    });
+});*/
+
+		$('#Upload').on('click', function() {
+	        $.ajax({
+	            url: '/file_upload',
+	            data: new FormData($('form')[0]),
+	            type: 'POST',
+	            processData: false,
+	            contentType: false,
+	            success: function(response) {
+	            	console.log("Success")
+	            }
+	                
+	        });    
+	    });
+	})
+	</script>
+</body>
+</html>

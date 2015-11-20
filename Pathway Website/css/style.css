@@ -1,0 +1,83 @@
+@import url(https://fonts.googleapis.com/css?family=Oswald:300);
+
+body {
+	font-family: 'Oswald', sans-serif;
+	//background-image: url("http://www.deliacreates.com/wp-content/uploads/2014/05/Geometric-Lines-Desktop-Wallpaper.png");
+	background-position: center;
+	background-size: 100%;
+}
+
+.wrapper {
+	height: 95vh;
+	width: 100vw;
+}
+
+footer {
+	height: 5vh;
+	color: white;
+	background-color: black;
+}
+
+footer p { 
+	text-align: center;
+	padding-top: 1em;
+}
+
+nav {
+	position: fixed;
+	left: 0;
+	background-color: #ED7700;
+	height: 95vh; 
+	width: 5vw;
+	text-indent: 10px;
+}
+
+nav ul {
+	list-style: none;
+	margin-top: 30vh;
+}
+
+nav li {
+    padding: 30px 0 30px 0;
+    margin-bottom: 10px;
+    background-color: white;
+}
+
+nav a {
+	color: #ED7700;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1em;
+    transition: font-size 0.1s;
+    
+    
+}
+
+nav a:hover {
+	font-size: 4em;
+}
+
+header a { 
+	margin-top: auto;
+	margin-bottom: auto;
+	margin-right: auto;
+	margin-left: auto;
+	font-size: 4.5em;
+	letter-spacing: 0.25em;
+	color: #ED7700;
+	background-color: white;
+	text-decoration: none;
+	border: 2px solid black;
+	padding: -50px;
+	display: block;
+	padding: 10px 40px 10px 40px;
+	transition: font-size 0.5s, background-color 0.8s;
+	
+}
+
+header a:hover {
+	font-size: 3.5em;
+	color: white;
+	background-color: #ED7700;
+	border: 2px solid #ED7700;
+}
