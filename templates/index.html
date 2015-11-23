@@ -2627,7 +2627,7 @@
         // creates the map
         create_map();
         // places nodes on the map
-        //create_markers();
+        create_markers();
         //var node = L.circle(map.unproject([50,50], map.getMaxZoom()), 1, node_start).addTo(map);
         node_things = [
             map.unproject([ 1200 , 620 ], map.getMaxZoom()),
@@ -2658,7 +2658,7 @@
                     map.remove();  
                     // redraws the map
                     create_map();
-                    //create_markers();
+                    create_markers();
                     // contains the list of functions for the shortest path
                     processed = [];
                     path = response.data;  
